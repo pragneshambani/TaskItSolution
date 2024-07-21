@@ -1,0 +1,6 @@
+@TaskItService_HostAddress = http://localhost:5258
+
+GET {{TaskItService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
