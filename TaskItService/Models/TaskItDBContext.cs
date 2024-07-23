@@ -5,7 +5,6 @@ namespace TaskItService.Models
 {
     public partial class TaskItDBContext : DbContext
     {
-        //public TaskItDBContext() : base() { }
         public TaskItDBContext(DbContextOptions
         <TaskItDBContext> options)
             : base(options)
