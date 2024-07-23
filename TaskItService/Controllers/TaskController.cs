@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web.Resource;
+using TaskItService.Models;
 
 namespace TaskItService.Controllers
 {
@@ -10,17 +11,17 @@ namespace TaskItService.Controllers
     //[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     public class TaskController : ControllerBase
     {
-        private readonly ILogger<Task> _logger;
+        private readonly ILogger<Models.Task> _logger;
 
-        public TaskController(ILogger<Task> logger)
+        public TaskController(ILogger<Models.Task> logger)
         {
             _logger = logger;
         }
 
         [HttpGet(Name = "GetTasks")]
-        public IEnumerable<Task> Get()
+        public IEnumerable<Models.Task> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Task
+            return Enumerable.Range(1, 5).Select(index => new Models.Task
             {
                 TaskId=1,
                 Description = "Task 1"
