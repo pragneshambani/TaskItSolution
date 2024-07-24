@@ -6,7 +6,7 @@ using TaskItService.Services;
 
 namespace TaskItService.Controllers
 {
-    //[Authorize]
+    [Authorize(policy:"api")]
     [ApiController]
     [Route("[controller]")]
     //[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
